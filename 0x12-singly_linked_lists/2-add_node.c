@@ -24,7 +24,7 @@ list_t *add_node(list_t **head, const char *str)
 	new_node->str = strdup(str);
 	if (!new_node->str)
 	{
-		free(new_node); /* clean up and free allocated memory if strdup fails */ 
+		free(new_node); /* clean up and free allocated memory if strdup fails */
 		return (NULL);
 	}
 
