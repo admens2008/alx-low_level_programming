@@ -5,12 +5,12 @@
 #include <stdlib.h>
 
 /**
- * struct unique_list_s - A singly linked list structure
- * @value: An integer value
+ * struct listint_s - A singly linked list structure
+ * @n: An integer value
  * @next: Points to the next node
  *
- * Description: A node structure for a singly linked list
- * used in ALX project.
+ * Description: A node structure for singly linked list
+ * used in alx project
  */
 typedef struct listint_s
 {
@@ -29,9 +29,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
 int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
-size_t print_listint_safe(const listint_t *head);
 listint_t *reverse_listint(listint_t **head);
-listint_t *find_listint_loop(listint_t *head);
+size_t print_listint_safe(const listint_t *head);
 size_t free_listint_safe(listint_t **h);
+listint_t *find_listint_loop(listint_t *head);
 
 #endif
+
