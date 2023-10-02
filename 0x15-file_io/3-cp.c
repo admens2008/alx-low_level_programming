@@ -53,7 +53,7 @@ void close_descriptor(int fd)
  *
  * Description: If the argument count is incorrect, it exits with code 97.
  * If the source file does not exist or cannot be read, it exits with code 98.
- * If the destination file cannot be created or written to, it exits with code 99.
+ * If the destination file can't be created or written to, exits with code 99
  * If any file descriptor cannot be closed, it exits with code 100.
  */
 int main(int argc, char *argv[])
@@ -72,8 +72,7 @@ int main(int argc, char *argv[])
 	read_result = read(source, buffer, 1024);
 	destination = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	do
-	{
+	do {
 		if (source == -1 || read_result == -1)
 		{
 			dprintf(STDERR_FILENO,
